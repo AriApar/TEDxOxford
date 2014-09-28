@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6275D3719D6060600E2B07F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6275D3619D6060600E2B07F /* NewsTableViewController.m */; };
+		B6301FE119D2C02B00B0DAA3 /* NewsCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */; };
+		B6301FE419D31E9700B0DAA3 /* NewsData.m in Sources */ = {isa = PBXBuildFile; fileRef = B6301FE319D31E9700B0DAA3 /* NewsData.m */; };
+		B6A7492219D58B3900683AB3 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A7492119D58B3900683AB3 /* ImageDownloader.m */; };
+		B6B7453619D42BEE009F1CD5 /* WPJSONDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B7453519D42BEE009F1CD5 /* WPJSONDataManager.m */; };
+		B6B7453C19D444B6009F1CD5 /* WPJSONCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B7453B19D444B6009F1CD5 /* WPJSONCommunicator.m */; };
+		B6B7453F19D451DF009F1CD5 /* NewsDataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B7453E19D451DF009F1CD5 /* NewsDataBuilder.m */; };
+		B6B902B619D88F6200769669 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B902B319D88F6200769669 /* GTMNSString+HTML.m */; };
+		B6B902B719D88F6200769669 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B902B519D88F6200769669 /* NSString+HTML.m */; };
+		B6B902BA19D899C000769669 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B902B919D899C000769669 /* NewsDetailViewController.m */; };
 		B6D2E54319CB6FC300630F15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D2E54219CB6FC300630F15 /* main.m */; };
 		B6D2E54619CB6FC300630F15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D2E54519CB6FC300630F15 /* AppDelegate.m */; };
-		B6D2E54919CB6FC300630F15 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D2E54819CB6FC300630F15 /* FirstViewController.m */; };
-		B6D2E54C19CB6FC300630F15 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D2E54B19CB6FC300630F15 /* SecondViewController.m */; };
 		B6D2E54F19CB6FC300630F15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D2E54D19CB6FC300630F15 /* Main.storyboard */; };
 		B6D2E55119CB6FC300630F15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D2E55019CB6FC300630F15 /* Images.xcassets */; };
 		B6D2E55419CB6FC300630F15 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D2E55219CB6FC300630F15 /* LaunchScreen.xib */; };
@@ -28,15 +36,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6275D3419D5F1E300E2B07F /* WPJSONDataManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPJSONDataManagerDelegate.h; sourceTree = "<group>"; };
+		B6275D3519D6060600E2B07F /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		B6275D3619D6060600E2B07F /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		B6301FDF19D2C02B00B0DAA3 /* NewsCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCellTableViewCell.h; sourceTree = "<group>"; };
+		B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellTableViewCell.m; sourceTree = "<group>"; };
+		B6301FE219D31E9700B0DAA3 /* NewsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsData.h; sourceTree = "<group>"; };
+		B6301FE319D31E9700B0DAA3 /* NewsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsData.m; sourceTree = "<group>"; };
+		B6A7491F19D58AC400683AB3 /* ImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloaderDelegate.h; sourceTree = "<group>"; };
+		B6A7492019D58B3900683AB3 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		B6A7492119D58B3900683AB3 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		B6A7492319D5990E00683AB3 /* ImageOnScreenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageOnScreenDelegate.h; sourceTree = "<group>"; };
+		B6B7453419D42BEE009F1CD5 /* WPJSONDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPJSONDataManager.h; sourceTree = "<group>"; };
+		B6B7453519D42BEE009F1CD5 /* WPJSONDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPJSONDataManager.m; sourceTree = "<group>"; };
+		B6B7453919D44419009F1CD5 /* WPJSONCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPJSONCommunicatorDelegate.h; sourceTree = "<group>"; };
+		B6B7453A19D444B6009F1CD5 /* WPJSONCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPJSONCommunicator.h; sourceTree = "<group>"; };
+		B6B7453B19D444B6009F1CD5 /* WPJSONCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPJSONCommunicator.m; sourceTree = "<group>"; };
+		B6B7453D19D451DF009F1CD5 /* NewsDataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDataBuilder.h; sourceTree = "<group>"; };
+		B6B7453E19D451DF009F1CD5 /* NewsDataBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDataBuilder.m; sourceTree = "<group>"; };
+		B6B902B219D88F6200769669 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		B6B902B319D88F6200769669 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		B6B902B419D88F6200769669 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		B6B902B519D88F6200769669 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		B6B902B819D899C000769669 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		B6B902B919D899C000769669 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		B6D2E53D19CB6FC300630F15 /* TEDxOxford.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEDxOxford.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D2E54119CB6FC300630F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6D2E54219CB6FC300630F15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6D2E54419CB6FC300630F15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6D2E54519CB6FC300630F15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B6D2E54719CB6FC300630F15 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		B6D2E54819CB6FC300630F15 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B6D2E54A19CB6FC300630F15 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B6D2E54B19CB6FC300630F15 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B6D2E54E19CB6FC300630F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6D2E55019CB6FC300630F15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B6D2E55319CB6FC300630F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -63,6 +91,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6B902AE19D8754D00769669 /* HTML Parser */ = {
+			isa = PBXGroup;
+			children = (
+				B6B902B219D88F6200769669 /* GTMNSString+HTML.h */,
+				B6B902B319D88F6200769669 /* GTMNSString+HTML.m */,
+				B6B902B419D88F6200769669 /* NSString+HTML.h */,
+				B6B902B519D88F6200769669 /* NSString+HTML.m */,
+			);
+			name = "HTML Parser";
+			sourceTree = "<group>";
+		};
 		B6D2E53419CB6FC300630F15 = {
 			isa = PBXGroup;
 			children = (
@@ -84,16 +123,33 @@
 		B6D2E53F19CB6FC300630F15 /* TEDxOxford */ = {
 			isa = PBXGroup;
 			children = (
+				B6301FDF19D2C02B00B0DAA3 /* NewsCellTableViewCell.h */,
+				B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */,
+				B6275D3519D6060600E2B07F /* NewsTableViewController.h */,
+				B6275D3619D6060600E2B07F /* NewsTableViewController.m */,
+				B6B902B819D899C000769669 /* NewsDetailViewController.h */,
+				B6B902B919D899C000769669 /* NewsDetailViewController.m */,
 				B6D2E54419CB6FC300630F15 /* AppDelegate.h */,
 				B6D2E54519CB6FC300630F15 /* AppDelegate.m */,
-				B6D2E54719CB6FC300630F15 /* FirstViewController.h */,
-				B6D2E54819CB6FC300630F15 /* FirstViewController.m */,
-				B6D2E54A19CB6FC300630F15 /* SecondViewController.h */,
-				B6D2E54B19CB6FC300630F15 /* SecondViewController.m */,
 				B6D2E54D19CB6FC300630F15 /* Main.storyboard */,
+				B6B902AE19D8754D00769669 /* HTML Parser */,
+				B6301FE219D31E9700B0DAA3 /* NewsData.h */,
+				B6301FE319D31E9700B0DAA3 /* NewsData.m */,
 				B6D2E55019CB6FC300630F15 /* Images.xcassets */,
 				B6D2E55219CB6FC300630F15 /* LaunchScreen.xib */,
 				B6D2E54019CB6FC300630F15 /* Supporting Files */,
+				B6B7453419D42BEE009F1CD5 /* WPJSONDataManager.h */,
+				B6B7453519D42BEE009F1CD5 /* WPJSONDataManager.m */,
+				B6B7453919D44419009F1CD5 /* WPJSONCommunicatorDelegate.h */,
+				B6275D3419D5F1E300E2B07F /* WPJSONDataManagerDelegate.h */,
+				B6A7491F19D58AC400683AB3 /* ImageDownloaderDelegate.h */,
+				B6A7492319D5990E00683AB3 /* ImageOnScreenDelegate.h */,
+				B6B7453A19D444B6009F1CD5 /* WPJSONCommunicator.h */,
+				B6B7453B19D444B6009F1CD5 /* WPJSONCommunicator.m */,
+				B6A7492019D58B3900683AB3 /* ImageDownloader.h */,
+				B6A7492119D58B3900683AB3 /* ImageDownloader.m */,
+				B6B7453D19D451DF009F1CD5 /* NewsDataBuilder.h */,
+				B6B7453E19D451DF009F1CD5 /* NewsDataBuilder.m */,
 			);
 			path = TEDxOxford;
 			sourceTree = "<group>";
@@ -173,6 +229,7 @@
 				TargetAttributes = {
 					B6D2E53C19CB6FC300630F15 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = Z55MM347FB;
 					};
 					B6D2E55819CB6FC300630F15 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -224,10 +281,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6D2E54C19CB6FC300630F15 /* SecondViewController.m in Sources */,
+				B6B7453619D42BEE009F1CD5 /* WPJSONDataManager.m in Sources */,
+				B6301FE419D31E9700B0DAA3 /* NewsData.m in Sources */,
+				B6B7453F19D451DF009F1CD5 /* NewsDataBuilder.m in Sources */,
+				B6275D3719D6060600E2B07F /* NewsTableViewController.m in Sources */,
+				B6B902B619D88F6200769669 /* GTMNSString+HTML.m in Sources */,
 				B6D2E54619CB6FC300630F15 /* AppDelegate.m in Sources */,
-				B6D2E54919CB6FC300630F15 /* FirstViewController.m in Sources */,
 				B6D2E54319CB6FC300630F15 /* main.m in Sources */,
+				B6301FE119D2C02B00B0DAA3 /* NewsCellTableViewCell.m in Sources */,
+				B6A7492219D58B3900683AB3 /* ImageDownloader.m in Sources */,
+				B6B7453C19D444B6009F1CD5 /* WPJSONCommunicator.m in Sources */,
+				B6B902B719D88F6200769669 /* NSString+HTML.m in Sources */,
+				B6B902BA19D899C000769669 /* NewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +414,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TEDxOxford/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,7 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TEDxOxford/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +489,7 @@
 				B6D2E56519CB6FC300630F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6D2E56619CB6FC300630F15 /* Build configuration list for PBXNativeTarget "TEDxOxfordTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +498,7 @@
 				B6D2E56819CB6FC300630F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
