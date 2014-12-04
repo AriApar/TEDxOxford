@@ -21,7 +21,21 @@
     ////To get speakers, I created a category specific for this purpose with slug "iospeakers"
     ////If you want to adapt to next years, create a new category for yours and change the link.
     NSString *urlAsString = @"http://tedxoxford.co.uk/api/get_category_posts/?slug=iospeakers&count=40&include=title,title_plain,content,id";
-    [self sendRequestTo:urlAsString];
+    //[self sendRequestTo:urlAsString];
+    
+    NSLog(@"%@", urlAsString);
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (error) {
+            [self.delegate fetchingSpeakerDataFailedWithError:error];
+        } else {
+            [self.delegate receivedSpeakerDataJSON:data];
+        }
+    }];
+
+    
 }
 
 - (void)getSchedule

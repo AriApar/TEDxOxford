@@ -12,6 +12,8 @@
 
 - (void)receivedNewsDataJSON:(NSData *)objectNotation;
 - (void)fetchingNewsDataFailedWithError:(NSError *)error;
+- (void)receivedSpeakerDataJSON:(NSData *)objectNotation;
+- (void)fetchingSpeakerDataFailedWithError:(NSError *)error;
 - (void)receivedScheduleDataJSON:(NSData *)objectNotation;
 - (void)receivedNewsByOffsetJSON:(NSData *)objectNotation;
 

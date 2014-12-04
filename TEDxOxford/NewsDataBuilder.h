@@ -17,5 +17,6 @@
 
 - (NSMutableArray *)newsDataFromJSON:(NSData *)objectNotation error:(NSError **)error;
 - (NewsData *)scheduleDataFromJSON:(NSData *)objectNotation error:(NSError **)error;
+- (NSMutableArray *) speakerDataFromJSON:(NSData *)objectNotation error:(NSError **)error;
 
 @end

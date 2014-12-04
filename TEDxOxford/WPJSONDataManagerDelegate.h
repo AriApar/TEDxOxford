@@ -12,8 +12,10 @@
 @protocol WPJSONDataManagerDelegate
 
 - (void)didReceiveNewsData:(NSArray *)groups;
+//- (void)didReceiveSpeakerData:(NSArray *)groups;
 - (void)didReceiveNewsOffsetData:(NSArray *)groups;
 - (void)fetchingNewsDataFailedWithError:(NSError *)error;
+//- (void)fetchingSpeakerDataFailedWithError:(NSError *)error;
 - (void)prepareImageFailedWithError:(NSError *)error forItemWithId:(NSString *)postid;
 - (void)updateImageForItemWithId:(NSString *)postid withImageData:(NSData *)image;
 - (void)didReceiveScheduleData:(NewsData *)newsData;

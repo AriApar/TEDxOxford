@@ -70,6 +70,26 @@
     }
 }
 
+- (void) fetchingSpeakerDataFailedWithError:(NSError *)error
+{
+    [self.delegate fetchingNewsDataFailedWithError:error];
+}
+
+- (void) receivedSpeakerDataJSON:(NSData *)objectNotation
+{
+    NSError *error = nil;
+    //Initialize the data builder
+    
+    NSMutableArray *newsItems = [self.builder speakerDataFromJSON:objectNotation error:&error];
+    
+    if (error != nil) {
+        [self.delegate fetchingNewsDataFailedWithError:error];
+        
+    } else {
+        [self.delegate didReceiveNewsData:newsItems];
+    }
+}
+
 - (void)receivedNewsByOffsetJSON:(NSData *)objectNotation
 {
     NSError *error = nil;
