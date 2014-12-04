@@ -8,7 +8,7 @@
 
 #import "NewsDetailViewController.h"
 
-@interface NewsDetailViewController () //<UIWebViewDelegate>
+@interface NewsDetailViewController () <UIWebViewDelegate>
 
 @end
 
@@ -30,7 +30,7 @@
 - (void)configureView
 {
     self.titleLabel.text = self.newsItem.title;
-    //self.contentTextView.delegate = self;
+    self.contentTextView.delegate = self;
     [self.contentTextView loadHTMLString:self.newsItem.content baseURL:nil];
 }
 
@@ -44,12 +44,19 @@
 }
 */
 
-/*
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    if (!isWebViewLoaded) { isWebViewLoaded = true; return YES; }
-    else return NO;
+    if ( navigationType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[request URL]];
+        return NO;
+    }
+    
+    return YES;
+    
+    //if (!isWebViewLoaded) { isWebViewLoaded = true; return YES; }
+    //else return NO;
 }
- */
+
 
 @end

@@ -10,18 +10,18 @@
 
 @implementation ImageDownloader
 
-- (void)getImageFromURLString:(NSString *)urlAsString forItemAtIndex:(NSUInteger)index
+- (void)getImageFromURLString:(NSString *)urlAsString forItemWithId:(NSString *)postid
 {
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", urlAsString);
     
-    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         
         if (error) {
-            [self.delegate fetchingImageFailedWithError:error forItemAtIndex:index];
+            [self.delegate fetchingImageFailedWithError:error forItemWithId:postid];
         } else {
-            UIImage *image = [UIImage imageWithData:data];
-            [self.delegate receivedImage:image forItemAtIndex:index];
+            //UIImage *image = [UIImage imageWithData:data];
+            [self.delegate imageData:data readyForItemWithId:postid];
         }
     }];
 }

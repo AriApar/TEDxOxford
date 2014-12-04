@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface NewsData : NSObject
+@interface NewsData : NSObject <NSCoding>
 
 @property NSString *title;
 @property NSString *content;
 @property NSString *postid;
 @property NSString *excerpt;
-@property UIImage *thumbnailImage;
+@property NSString *thumbnailImage;
+@property NSData *imageData;
 
 - (NewsData *)copyTextData;
 

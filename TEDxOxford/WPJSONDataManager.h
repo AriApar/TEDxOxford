@@ -11,14 +11,19 @@
 #import "WPJSONCommunicatorDelegate.h"
 #import "ImageOnScreenDelegate.h"
 #import "WPJSONCommunicator.h"
+#import "NewsDataBuilder.h"
 
 
 @interface WPJSONDataManager : NSObject<WPJSONCommunicatorDelegate, ImageOnScreenDelegate>
 
 @property (strong, nonatomic) WPJSONCommunicator *communicator;
+@property (strong, nonatomic) NewsDataBuilder *builder;
 
 @property (weak, nonatomic) id<WPJSONDataManagerDelegate> delegate;
 
 - (void)getRecentNewsByPage:(NSInteger) pageNumber;
-
+- (void)getSpeakers;
+- (void)getSchedule;
+- (void)refreshNewsFromTime:(NSString *)time;
+- (void)loadMorePostsWithOffset:(NSUInteger)offset;
 @end

@@ -14,5 +14,9 @@
 @property (weak, nonatomic) id<WPJSONCommunicatorDelegate> delegate;
 
 - (void)getRecentNewsByPage:(NSInteger) pageNumber;
+- (void)getSpeakers;
+- (void)getSchedule;
+- (void)refreshNewsFromTime:(NSString *)time;
+- (void)getNewsByOffset:(NSUInteger) offset;
 
 @end

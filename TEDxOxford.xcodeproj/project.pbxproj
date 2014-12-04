@@ -10,7 +10,10 @@
 		B6275D3719D6060600E2B07F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6275D3619D6060600E2B07F /* NewsTableViewController.m */; };
 		B6301FE119D2C02B00B0DAA3 /* NewsCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */; };
 		B6301FE419D31E9700B0DAA3 /* NewsData.m in Sources */ = {isa = PBXBuildFile; fileRef = B6301FE319D31E9700B0DAA3 /* NewsData.m */; };
+		B6A4099919D990EE00565C62 /* SpeakersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4099819D990EE00565C62 /* SpeakersTableViewController.m */; };
 		B6A7492219D58B3900683AB3 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A7492119D58B3900683AB3 /* ImageDownloader.m */; };
+		B6A9886619DF2D4C00B3FF35 /* blogreading1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6A9886519DF2D4C00B3FF35 /* blogreading1.jpg */; };
+		B6AC433419DACDE70045C0E1 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC433319DACDE70045C0E1 /* ScheduleViewController.m */; };
 		B6B7453619D42BEE009F1CD5 /* WPJSONDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B7453519D42BEE009F1CD5 /* WPJSONDataManager.m */; };
 		B6B7453C19D444B6009F1CD5 /* WPJSONCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B7453B19D444B6009F1CD5 /* WPJSONCommunicator.m */; };
 		B6B7453F19D451DF009F1CD5 /* NewsDataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B7453E19D451DF009F1CD5 /* NewsDataBuilder.m */; };
@@ -21,7 +24,6 @@
 		B6D2E54619CB6FC300630F15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D2E54519CB6FC300630F15 /* AppDelegate.m */; };
 		B6D2E54F19CB6FC300630F15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D2E54D19CB6FC300630F15 /* Main.storyboard */; };
 		B6D2E55119CB6FC300630F15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D2E55019CB6FC300630F15 /* Images.xcassets */; };
-		B6D2E55419CB6FC300630F15 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D2E55219CB6FC300630F15 /* LaunchScreen.xib */; };
 		B6D2E56019CB6FC300630F15 /* TEDxOxfordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D2E55F19CB6FC300630F15 /* TEDxOxfordTests.m */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +45,15 @@
 		B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellTableViewCell.m; sourceTree = "<group>"; };
 		B6301FE219D31E9700B0DAA3 /* NewsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsData.h; sourceTree = "<group>"; };
 		B6301FE319D31E9700B0DAA3 /* NewsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsData.m; sourceTree = "<group>"; };
+		B6A4099719D990EE00565C62 /* SpeakersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakersTableViewController.h; sourceTree = "<group>"; };
+		B6A4099819D990EE00565C62 /* SpeakersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakersTableViewController.m; sourceTree = "<group>"; };
 		B6A7491F19D58AC400683AB3 /* ImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloaderDelegate.h; sourceTree = "<group>"; };
 		B6A7492019D58B3900683AB3 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		B6A7492119D58B3900683AB3 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		B6A7492319D5990E00683AB3 /* ImageOnScreenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageOnScreenDelegate.h; sourceTree = "<group>"; };
+		B6A9886519DF2D4C00B3FF35 /* blogreading1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blogreading1.jpg; path = Images.xcassets/defaultThumbnail.imageset/blogreading1.jpg; sourceTree = "<group>"; };
+		B6AC433219DACDE70045C0E1 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		B6AC433319DACDE70045C0E1 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		B6B7453419D42BEE009F1CD5 /* WPJSONDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPJSONDataManager.h; sourceTree = "<group>"; };
 		B6B7453519D42BEE009F1CD5 /* WPJSONDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPJSONDataManager.m; sourceTree = "<group>"; };
 		B6B7453919D44419009F1CD5 /* WPJSONCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPJSONCommunicatorDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +74,6 @@
 		B6D2E54519CB6FC300630F15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B6D2E54E19CB6FC300630F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6D2E55019CB6FC300630F15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B6D2E55319CB6FC300630F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B6D2E55919CB6FC300630F15 /* TEDxOxfordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEDxOxfordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D2E55E19CB6FC300630F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6D2E55F19CB6FC300630F15 /* TEDxOxfordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEDxOxfordTests.m; sourceTree = "<group>"; };
@@ -91,6 +97,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6ABBF7119E169360071D190 /* Schedule View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6AC433219DACDE70045C0E1 /* ScheduleViewController.h */,
+				B6AC433319DACDE70045C0E1 /* ScheduleViewController.m */,
+			);
+			name = "Schedule View Controller";
+			sourceTree = "<group>";
+		};
+		B6AC432C19DAC8430045C0E1 /* Custom News Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B6301FDF19D2C02B00B0DAA3 /* NewsCellTableViewCell.h */,
+				B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */,
+			);
+			name = "Custom News Cell";
+			sourceTree = "<group>";
+		};
+		B6AC432D19DAC8590045C0E1 /* News Table View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6275D3519D6060600E2B07F /* NewsTableViewController.h */,
+				B6275D3619D6060600E2B07F /* NewsTableViewController.m */,
+			);
+			name = "News Table View Controller";
+			sourceTree = "<group>";
+		};
+		B6AC432E19DAC8700045C0E1 /* News Detail View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6B902B819D899C000769669 /* NewsDetailViewController.h */,
+				B6B902B919D899C000769669 /* NewsDetailViewController.m */,
+			);
+			name = "News Detail View Controller";
+			sourceTree = "<group>";
+		};
+		B6AC432F19DAC8800045C0E1 /* Speakers Table View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6A4099719D990EE00565C62 /* SpeakersTableViewController.h */,
+				B6A4099819D990EE00565C62 /* SpeakersTableViewController.m */,
+			);
+			name = "Speakers Table View Controller";
+			sourceTree = "<group>";
+		};
+		B6AC433019DAC8DE0045C0E1 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B6B7453919D44419009F1CD5 /* WPJSONCommunicatorDelegate.h */,
+				B6275D3419D5F1E300E2B07F /* WPJSONDataManagerDelegate.h */,
+				B6A7491F19D58AC400683AB3 /* ImageDownloaderDelegate.h */,
+				B6A7492319D5990E00683AB3 /* ImageOnScreenDelegate.h */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		B6AC433119DAC9000045C0E1 /* News Data & Connection Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				B6B7453419D42BEE009F1CD5 /* WPJSONDataManager.h */,
+				B6B7453519D42BEE009F1CD5 /* WPJSONDataManager.m */,
+				B6301FE219D31E9700B0DAA3 /* NewsData.h */,
+				B6301FE319D31E9700B0DAA3 /* NewsData.m */,
+				B6B7453A19D444B6009F1CD5 /* WPJSONCommunicator.h */,
+				B6B7453B19D444B6009F1CD5 /* WPJSONCommunicator.m */,
+				B6A7492019D58B3900683AB3 /* ImageDownloader.h */,
+				B6A7492119D58B3900683AB3 /* ImageDownloader.m */,
+				B6B7453D19D451DF009F1CD5 /* NewsDataBuilder.h */,
+				B6B7453E19D451DF009F1CD5 /* NewsDataBuilder.m */,
+			);
+			name = "News Data & Connection Handlers";
+			sourceTree = "<group>";
+		};
 		B6B902AE19D8754D00769669 /* HTML Parser */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,33 +202,20 @@
 		B6D2E53F19CB6FC300630F15 /* TEDxOxford */ = {
 			isa = PBXGroup;
 			children = (
-				B6301FDF19D2C02B00B0DAA3 /* NewsCellTableViewCell.h */,
-				B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */,
-				B6275D3519D6060600E2B07F /* NewsTableViewController.h */,
-				B6275D3619D6060600E2B07F /* NewsTableViewController.m */,
-				B6B902B819D899C000769669 /* NewsDetailViewController.h */,
-				B6B902B919D899C000769669 /* NewsDetailViewController.m */,
+				B6D2E54D19CB6FC300630F15 /* Main.storyboard */,
+				B6ABBF7119E169360071D190 /* Schedule View Controller */,
+				B6AC432C19DAC8430045C0E1 /* Custom News Cell */,
+				B6AC432D19DAC8590045C0E1 /* News Table View Controller */,
+				B6AC432E19DAC8700045C0E1 /* News Detail View Controller */,
+				B6AC432F19DAC8800045C0E1 /* Speakers Table View Controller */,
+				B6AC433119DAC9000045C0E1 /* News Data & Connection Handlers */,
+				B6AC433019DAC8DE0045C0E1 /* Delegates */,
+				B6B902AE19D8754D00769669 /* HTML Parser */,
 				B6D2E54419CB6FC300630F15 /* AppDelegate.h */,
 				B6D2E54519CB6FC300630F15 /* AppDelegate.m */,
-				B6D2E54D19CB6FC300630F15 /* Main.storyboard */,
-				B6B902AE19D8754D00769669 /* HTML Parser */,
-				B6301FE219D31E9700B0DAA3 /* NewsData.h */,
-				B6301FE319D31E9700B0DAA3 /* NewsData.m */,
 				B6D2E55019CB6FC300630F15 /* Images.xcassets */,
-				B6D2E55219CB6FC300630F15 /* LaunchScreen.xib */,
+				B6A9886519DF2D4C00B3FF35 /* blogreading1.jpg */,
 				B6D2E54019CB6FC300630F15 /* Supporting Files */,
-				B6B7453419D42BEE009F1CD5 /* WPJSONDataManager.h */,
-				B6B7453519D42BEE009F1CD5 /* WPJSONDataManager.m */,
-				B6B7453919D44419009F1CD5 /* WPJSONCommunicatorDelegate.h */,
-				B6275D3419D5F1E300E2B07F /* WPJSONDataManagerDelegate.h */,
-				B6A7491F19D58AC400683AB3 /* ImageDownloaderDelegate.h */,
-				B6A7492319D5990E00683AB3 /* ImageOnScreenDelegate.h */,
-				B6B7453A19D444B6009F1CD5 /* WPJSONCommunicator.h */,
-				B6B7453B19D444B6009F1CD5 /* WPJSONCommunicator.m */,
-				B6A7492019D58B3900683AB3 /* ImageDownloader.h */,
-				B6A7492119D58B3900683AB3 /* ImageDownloader.m */,
-				B6B7453D19D451DF009F1CD5 /* NewsDataBuilder.h */,
-				B6B7453E19D451DF009F1CD5 /* NewsDataBuilder.m */,
 			);
 			path = TEDxOxford;
 			sourceTree = "<group>";
@@ -262,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D2E54F19CB6FC300630F15 /* Main.storyboard in Resources */,
-				B6D2E55419CB6FC300630F15 /* LaunchScreen.xib in Resources */,
+				B6A9886619DF2D4C00B3FF35 /* blogreading1.jpg in Resources */,
 				B6D2E55119CB6FC300630F15 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,9 +352,11 @@
 				B6B7453F19D451DF009F1CD5 /* NewsDataBuilder.m in Sources */,
 				B6275D3719D6060600E2B07F /* NewsTableViewController.m in Sources */,
 				B6B902B619D88F6200769669 /* GTMNSString+HTML.m in Sources */,
+				B6AC433419DACDE70045C0E1 /* ScheduleViewController.m in Sources */,
 				B6D2E54619CB6FC300630F15 /* AppDelegate.m in Sources */,
 				B6D2E54319CB6FC300630F15 /* main.m in Sources */,
 				B6301FE119D2C02B00B0DAA3 /* NewsCellTableViewCell.m in Sources */,
+				B6A4099919D990EE00565C62 /* SpeakersTableViewController.m in Sources */,
 				B6A7492219D58B3900683AB3 /* ImageDownloader.m in Sources */,
 				B6B7453C19D444B6009F1CD5 /* WPJSONCommunicator.m in Sources */,
 				B6B902B719D88F6200769669 /* NSString+HTML.m in Sources */,
@@ -321,14 +389,6 @@
 				B6D2E54E19CB6FC300630F15 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B6D2E55219CB6FC300630F15 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6D2E55319CB6FC300630F15 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -11,10 +11,11 @@
 #import "ImageDownloaderDelegate.h"
 #import "ImageOnScreenDelegate.h"
 
-@interface NewsDataBuilder : NSObject<ImageDownloaderDelegate>
+@interface NewsDataBuilder : NSObject
 
 @property (weak, nonatomic) id<ImageOnScreenDelegate> delegate;
 
-- (NSArray *)newsDataFromJSON:(NSData *)objectNotation error:(NSError **)error;
+- (NSMutableArray *)newsDataFromJSON:(NSData *)objectNotation error:(NSError **)error;
+- (NewsData *)scheduleDataFromJSON:(NSData *)objectNotation error:(NSError **)error;
 
 @end

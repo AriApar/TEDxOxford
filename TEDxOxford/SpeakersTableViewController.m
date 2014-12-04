@@ -1,44 +1,43 @@
 //
-//  NewsTableViewController.m
+//  SpeakersTableViewController.m
 //  TEDxOxford
 //
-//  Created by Ari Aparikyan on 26/09/2014.
+//  Created by Ari Aparikyan on 29/09/2014.
 //  Copyright (c) 2014 Ari Aparikyan. All rights reserved.
 //
 
-#import "NewsTableViewController.h"
-#import "WPJSONDataManagerDelegate.h"
-#import "WPJSONDataManager.h"
-#import "NewsData.h"
-#import "NewsCellTableViewCell.h"
+#import "SpeakersTableViewController.h"
 #import "NewsDetailViewController.h"
 
-@interface NewsTableViewController () <WPJSONDataManagerDelegate> {
-    NSArray *_news;
+@interface SpeakersTableViewController () <WPJSONDataManagerDelegate> {
+    NSArray *_speakers;
     WPJSONDataManager *_manager;
-    NSInteger _pageNo;
-    dispatch_semaphore_t sema;
+    BOOL _refreshing;
+    UIRefreshControl *_sender;
 }
+
 
 @end
 
-@implementation NewsTableViewController
+@implementation SpeakersTableViewController
 
 - (void)viewDidLoad {
+    _refreshing = NO;
     [super viewDidLoad];
+    _manager = [[WPJSONDataManager alloc] init];
+    _manager.delegate = self;
+    
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator.hidesWhenStopped = YES;
+    self.activityIndicator.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    
+    [_manager getSpeakers];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    _manager = [[WPJSONDataManager alloc] init];
-    _manager.delegate = self;
-    _pageNo = 1;
-    sema = dispatch_semaphore_create(0);
-    
-    [_manager getRecentNewsByPage:_pageNo];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,11 +47,14 @@
 
 #pragma mark - WPJSONDataManagerDelegate
 
--(void) didReceiveNewsData:(NSArray *)news
+- (void) didReceiveNewsData:(NSArray *)groups
 {
-    _news = news;
-    dispatch_semaphore_signal(sema);
-    [self.tableView reloadData];
+    _speakers = groups;
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+    if(_refreshing) {
+        [_sender endRefreshing];
+        _refreshing = NO;
+    }
 }
 
 - (void) fetchingNewsDataFailedWithError:(NSError *)error
@@ -69,42 +71,45 @@
 
 - (void) updateImageForItemAtIndex:(NSUInteger)index withImage:(UIImage *)image
 {
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-    NewsData *item = _news[index];
-    item.thumbnailImage = image;
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-    NSArray *indexArray = [NSArray arrayWithObject:indexPath];
-    [self.tableView reloadRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationFade];
+    //No image for speakers, do nothing.
 }
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    if (_speakers)
+    {
+        [self.activityIndicator stopAnimating];
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        //self.tableView.backgroundView = nil;
+        return 1;
+    }
+    else
+    {
+        [self.activityIndicator startAnimating];
+        self.tableView.backgroundView = self.activityIndicator;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return _news.count;
+    return _speakers.count;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NewsCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell"
-                                                            forIndexPath:indexPath];
-    UIImage *defImg = [UIImage imageNamed:@"blogreading1.jpg"];
-    cell.thumbnailImage.image = defImg;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SpeakersCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
-    NewsData *item = _news[indexPath.row];
-    cell.titleLabel.text = item.title;
-    [cell.excerptLabel setText:item.excerpt];
-    if (item.thumbnailImage) {
-        cell.thumbnailImage.image = item.thumbnailImage;
-    }
+    NewsData *item = _speakers[indexPath.row];
+    [cell.textLabel setText:item.title];
     
     return cell;
 }
@@ -144,17 +149,24 @@
 }
 */
 
-
-#pragma mark - Navigation
+#pragma mark - navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    NewsData *object = _news[indexPath.row];
+    NewsData *object = _speakers[indexPath.row];
     [[segue destinationViewController] setNewsItem:object];
 }
 
+#pragma mark - Refresh
 
+- (IBAction)refresh:(UIRefreshControl *)sender
+{
+    _sender = sender;
+    _refreshing = YES;
+    [_manager getSpeakers];
+    
+}
 @end

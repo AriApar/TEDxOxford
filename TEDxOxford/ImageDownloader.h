@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "NewsData.h"
-#import "ImageDownloaderDelegate.h"
+#import "ImageOnScreenDelegate.h"
 
 @interface ImageDownloader : NSObject
 
-@property (nonatomic) id<ImageDownloaderDelegate> delegate;
+@property (nonatomic) id<ImageOnScreenDelegate> delegate;
 
-- (void)getImageFromURLString:(NSString *)urlAsString forItemAtIndex:(NSUInteger)index;
+- (void)getImageFromURLString:(NSString *)urlAsString forItemWithId:(NSString *)postid;
 
 @end

@@ -11,6 +11,7 @@
 
 @interface NewsDetailViewController : UIViewController
 
+
 @property IBOutlet UIWebView *contentTextView;
 @property IBOutlet UILabel *titleLabel;
 @property NewsData *newsItem;

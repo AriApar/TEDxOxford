@@ -17,6 +17,8 @@
     if(self) {
         _communicator = [WPJSONCommunicator new];
         _communicator.delegate = self;
+        _builder = [NewsDataBuilder new];
+        _builder.delegate = self;
     }
     return self;
 }
@@ -24,6 +26,26 @@
 - (void)getRecentNewsByPage:(NSInteger) pageNumber
 {
     [self.communicator getRecentNewsByPage:pageNumber];
+}
+
+- (void)getSpeakers
+{
+    [self.communicator getSpeakers];
+}
+
+- (void)getSchedule
+{
+    [self.communicator getSchedule];
+}
+
+- (void)refreshNewsFromTime:(NSString *)time
+{
+    [self.communicator refreshNewsFromTime:time];
+}
+
+- (void)loadMorePostsWithOffset:(NSUInteger)offset
+{
+    [self.communicator getNewsByOffset:offset];
 }
 
 #pragma mark - WPJSONCommunicatorDelegate
@@ -37,10 +59,8 @@
 {
     NSError *error = nil;
     //Initialize the data builder
-    NewsDataBuilder *builder = [NewsDataBuilder new];
-    builder.delegate = self;
     
-    NSArray *newsItems = [builder newsDataFromJSON:objectNotation error:&error];
+    NSMutableArray *newsItems = [self.builder newsDataFromJSON:objectNotation error:&error];
     
     if (error != nil) {
         [self.delegate fetchingNewsDataFailedWithError:error];
@@ -50,15 +70,50 @@
     }
 }
 
-#pragma mark - ImageOnScreenDelegate
-
-- (void) prepareImageFailedWithError:(NSError *)error forItemAtIndex:(NSUInteger)index
+- (void)receivedNewsByOffsetJSON:(NSData *)objectNotation
 {
-    [self.delegate prepareImageFailedWithError:error forItemAtIndex:index];
+    NSError *error = nil;
+    //Initialize the data builder
+    
+    NSMutableArray *newsItems = [self.builder newsDataFromJSON:objectNotation error:&error];
+    
+    if (error != nil) {
+        [self.delegate fetchingNewsDataFailedWithError:error];
+        
+    } else {
+        [self.delegate didReceiveNewsOffsetData:newsItems];
+    }
+
 }
 
-- (void) image:(UIImage *)image readyForItemAtIndex:(NSUInteger)index
+- (void) receivedScheduleDataJSON:(NSData *)objectNotation
 {
-    [self.delegate updateImageForItemAtIndex:index withImage:image];
+    NSError *error = nil;
+    
+    NewsData *schedule = [self.builder scheduleDataFromJSON:objectNotation error:&error];
+    
+    
+    if (error != nil) {
+        [self.delegate fetchingNewsDataFailedWithError:error];
+        
+    } else {
+        [self.delegate didReceiveScheduleData:schedule];
+    }
+}
+
+
+
+
+#pragma mark - ImageOnScreenDelegate
+
+- (void) prepareImageFailedWithError:(NSError *)error forItemWithId:(NSString *)postid
+{
+    [self.delegate prepareImageFailedWithError:error forItemWithId:postid];
+}
+
+- (void) imageData:(NSData *)image readyForItemWithId:(NSString *)postid
+{
+    
+    [self.delegate updateImageForItemWithId:postid withImageData:image];
 }
 @end

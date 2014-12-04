@@ -11,7 +11,7 @@
 
 @protocol ImageDownloaderDelegate <NSObject>
 
-- (void)receivedImage:(UIImage *)objectNotation forItemAtIndex:(NSUInteger)index;
-- (void)fetchingImageFailedWithError:(NSError *)error forItemAtIndex:(NSUInteger)index;
+- (void)receivedImage:(UIImage *)objectNotation forItemWithId:(NSString *)postid;
+- (void)fetchingImageFailedWithError:(NSError *)error forItemWithId:(NSString *)postid;
 
 @end
