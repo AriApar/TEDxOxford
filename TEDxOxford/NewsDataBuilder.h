@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ImageDownloader.h"
-#import "ImageDownloaderDelegate.h"
 #import "ImageOnScreenDelegate.h"
 
 @interface NewsDataBuilder : NSObject

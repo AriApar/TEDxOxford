@@ -16,6 +16,7 @@
 @interface NewsTableViewController () <WPJSONDataManagerDelegate> {
     NSMutableArray *_news;
     NSString *_lastRefreshed;
+    NSString *_dateString;
     WPJSONDataManager *_manager;
     NSInteger _pageNo;
     BOOL _refreshing;
@@ -36,6 +37,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /*[[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(viewDidLoad)
+                                                 name:UIApplicationWillEnterForegroundNotification object:nil];*/
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -53,18 +58,27 @@
     [_dateFormat setDateFormat:@"yyyy-MM-dd'%20'HH:mm:ss"];
     NSDate *now = [NSDate date];
     
-    NSString *dateString = [_dateFormat stringFromDate:now];
-    _lastRefreshed = dateString;
+    _dateString = [_dateFormat stringFromDate:now];
     
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.activityIndicator.hidesWhenStopped = YES;
     self.activityIndicator.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
     // Try loading old data
-    [self loadDataFromDisk];
+    //[self loadDataFromDisk];
     
     if (!_news) {
         dispatch_group_enter(group);
         [_manager refreshNewsFromTime:nil];
+    }
+    else {
+        [_manager getImagesForItems:_news];
+        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.tableView.tableFooterView.hidden = NO;
+            _loadMore.enabled = YES;
+        });
+        //[self.activityIndicator stopAnimating];
     }
     
 }
@@ -101,6 +115,8 @@
         _refreshing = NO;
     }
     
+    _lastRefreshed = _dateString;
+    
     dispatch_group_leave(group);
 }
 
@@ -131,6 +147,14 @@
 
 - (void) fetchingNewsDataFailedWithError:(NSError *)error
 {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_group_leave(group);
+        //[self.activityIndicator stopAnimating];
+        if(_refreshing) {
+            [_sender endRefreshing];
+            _refreshing = NO;
+        }
+    });
     //TODO show message to user
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
@@ -183,6 +207,16 @@
     return _lastRefreshed;
 }
 
+- (void)setNews:(NSMutableArray *)news
+{
+    _news = news;
+}
+
+- (void)setLastRefreshed:(NSString *)lastRefreshed
+{
+    _lastRefreshed = lastRefreshed;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -230,8 +264,6 @@
     if ([rootObject valueForKey:@"LastRefreshed"]) {
         _lastRefreshed = [rootObject valueForKey:@"LastRefreshed"];
     }
-    
-    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     
     NSLog(@"Data loaded");
 }
@@ -303,6 +335,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    /*[[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIApplicationDidBecomeActiveNotification
+                                                  object:nil];*/
+    
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NewsData *object = _news[indexPath.row];
     [[segue destinationViewController] setNewsItem:object];

@@ -38,6 +38,16 @@
     [self.communicator getSchedule];
 }
 
+- (void)getAboutUs
+{
+    [self.communicator getAboutUs];
+}
+
+- (void)getOurPartner
+{
+    [self.communicator getOurPartner];
+}
+
 - (void)refreshNewsFromTime:(NSString *)time
 {
     [self.communicator refreshNewsFromTime:time];
@@ -46,6 +56,17 @@
 - (void)loadMorePostsWithOffset:(NSUInteger)offset
 {
     [self.communicator getNewsByOffset:offset];
+}
+
+- (void)getImagesForItems:(NSMutableArray *)news
+{
+    for (NewsData *data in news) {
+        if (!data.imageData && data.thumbnailImage)
+        {
+            [self.communicator getImageForItem:data];
+        }
+        
+    }
 }
 
 #pragma mark - WPJSONCommunicatorDelegate

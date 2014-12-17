@@ -24,6 +24,10 @@
 - (void)getRecentNewsByPage:(NSInteger) pageNumber;
 - (void)getSpeakers;
 - (void)getSchedule;
+- (void)getAboutUs;
+- (void)getOurPartner;
 - (void)refreshNewsFromTime:(NSString *)time;
 - (void)loadMorePostsWithOffset:(NSUInteger)offset;
+- (void)getImagesForItems:(NSMutableArray *)news;
+
 @end

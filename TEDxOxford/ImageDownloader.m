@@ -18,7 +18,7 @@
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         
         if (error) {
-            [self.delegate fetchingImageFailedWithError:error forItemWithId:postid];
+            [self.delegate prepareImageFailedWithError:error forItemWithId:postid];
         } else {
             //UIImage *image = [UIImage imageWithData:data];
             [self.delegate imageData:data readyForItemWithId:postid];

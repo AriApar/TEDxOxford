@@ -59,12 +59,22 @@
 
 - (void) fetchingNewsDataFailedWithError:(NSError *)error
 {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //[self.activityIndicator stopAnimating];
+        if(_refreshing) {
+            [_sender endRefreshing];
+            _refreshing = NO;
+        }
+    });
     //TODO show message to user
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 - (void) prepareImageFailedWithError:(NSError *)error forItemAtIndex:(NSUInteger)index
 {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //[self.activityIndicator stopAnimating];
+    });
     //TODO show message to user
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }

@@ -10,6 +10,10 @@
 		B6275D3719D6060600E2B07F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6275D3619D6060600E2B07F /* NewsTableViewController.m */; };
 		B6301FE119D2C02B00B0DAA3 /* NewsCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */; };
 		B6301FE419D31E9700B0DAA3 /* NewsData.m in Sources */ = {isa = PBXBuildFile; fileRef = B6301FE319D31E9700B0DAA3 /* NewsData.m */; };
+		B6514D661A385DE0008BDCC8 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6514D651A385DE0008BDCC8 /* AboutUsViewController.m */; };
+		B6514D691A38E384008BDCC8 /* TweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6514D681A38E384008BDCC8 /* TweetsViewController.m */; };
+		B6514D6D1A3C4BA6008BDCC8 /* OurPartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6514D6C1A3C4BA6008BDCC8 /* OurPartnerViewController.m */; };
+		B6514D7C1A3DE832008BDCC8 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6514D7B1A3DE832008BDCC8 /* Media.xcassets */; };
 		B6A4099919D990EE00565C62 /* SpeakersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4099819D990EE00565C62 /* SpeakersTableViewController.m */; };
 		B6A7492219D58B3900683AB3 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A7492119D58B3900683AB3 /* ImageDownloader.m */; };
 		B6A9886619DF2D4C00B3FF35 /* blogreading1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6A9886519DF2D4C00B3FF35 /* blogreading1.jpg */; };
@@ -45,9 +49,15 @@
 		B6301FE019D2C02B00B0DAA3 /* NewsCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellTableViewCell.m; sourceTree = "<group>"; };
 		B6301FE219D31E9700B0DAA3 /* NewsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsData.h; sourceTree = "<group>"; };
 		B6301FE319D31E9700B0DAA3 /* NewsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsData.m; sourceTree = "<group>"; };
+		B6514D641A385DE0008BDCC8 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		B6514D651A385DE0008BDCC8 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		B6514D671A38E384008BDCC8 /* TweetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsViewController.h; sourceTree = "<group>"; };
+		B6514D681A38E384008BDCC8 /* TweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsViewController.m; sourceTree = "<group>"; };
+		B6514D6B1A3C4BA6008BDCC8 /* OurPartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OurPartnerViewController.h; sourceTree = "<group>"; };
+		B6514D6C1A3C4BA6008BDCC8 /* OurPartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurPartnerViewController.m; sourceTree = "<group>"; };
+		B6514D7B1A3DE832008BDCC8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		B6A4099719D990EE00565C62 /* SpeakersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakersTableViewController.h; sourceTree = "<group>"; };
 		B6A4099819D990EE00565C62 /* SpeakersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakersTableViewController.m; sourceTree = "<group>"; };
-		B6A7491F19D58AC400683AB3 /* ImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloaderDelegate.h; sourceTree = "<group>"; };
 		B6A7492019D58B3900683AB3 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		B6A7492119D58B3900683AB3 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		B6A7492319D5990E00683AB3 /* ImageOnScreenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageOnScreenDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +107,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6514D631A385D29008BDCC8 /* About Us View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6514D641A385DE0008BDCC8 /* AboutUsViewController.h */,
+				B6514D651A385DE0008BDCC8 /* AboutUsViewController.m */,
+			);
+			name = "About Us View Controller";
+			sourceTree = "<group>";
+		};
+		B6514D6A1A39BA82008BDCC8 /* Tweets View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6514D671A38E384008BDCC8 /* TweetsViewController.h */,
+				B6514D681A38E384008BDCC8 /* TweetsViewController.m */,
+			);
+			name = "Tweets View Controller";
+			sourceTree = "<group>";
+		};
+		B6514D6E1A3C4BD9008BDCC8 /* Our Partner View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6514D6B1A3C4BA6008BDCC8 /* OurPartnerViewController.h */,
+				B6514D6C1A3C4BA6008BDCC8 /* OurPartnerViewController.m */,
+			);
+			name = "Our Partner View Controller";
+			sourceTree = "<group>";
+		};
 		B6ABBF7119E169360071D190 /* Schedule View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +184,6 @@
 			children = (
 				B6B7453919D44419009F1CD5 /* WPJSONCommunicatorDelegate.h */,
 				B6275D3419D5F1E300E2B07F /* WPJSONDataManagerDelegate.h */,
-				B6A7491F19D58AC400683AB3 /* ImageDownloaderDelegate.h */,
 				B6A7492319D5990E00683AB3 /* ImageOnScreenDelegate.h */,
 			);
 			name = Delegates;
@@ -203,6 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				B6D2E54D19CB6FC300630F15 /* Main.storyboard */,
+				B6514D6E1A3C4BD9008BDCC8 /* Our Partner View Controller */,
+				B6514D6A1A39BA82008BDCC8 /* Tweets View Controller */,
+				B6514D631A385D29008BDCC8 /* About Us View Controller */,
 				B6ABBF7119E169360071D190 /* Schedule View Controller */,
 				B6AC432C19DAC8430045C0E1 /* Custom News Cell */,
 				B6AC432D19DAC8590045C0E1 /* News Table View Controller */,
@@ -216,6 +255,7 @@
 				B6D2E55019CB6FC300630F15 /* Images.xcassets */,
 				B6A9886519DF2D4C00B3FF35 /* blogreading1.jpg */,
 				B6D2E54019CB6FC300630F15 /* Supporting Files */,
+				B6514D7B1A3DE832008BDCC8 /* Media.xcassets */,
 			);
 			path = TEDxOxford;
 			sourceTree = "<group>";
@@ -328,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D2E54F19CB6FC300630F15 /* Main.storyboard in Resources */,
+				B6514D7C1A3DE832008BDCC8 /* Media.xcassets in Resources */,
 				B6A9886619DF2D4C00B3FF35 /* blogreading1.jpg in Resources */,
 				B6D2E55119CB6FC300630F15 /* Images.xcassets in Resources */,
 			);
@@ -352,12 +393,15 @@
 				B6B7453F19D451DF009F1CD5 /* NewsDataBuilder.m in Sources */,
 				B6275D3719D6060600E2B07F /* NewsTableViewController.m in Sources */,
 				B6B902B619D88F6200769669 /* GTMNSString+HTML.m in Sources */,
+				B6514D661A385DE0008BDCC8 /* AboutUsViewController.m in Sources */,
 				B6AC433419DACDE70045C0E1 /* ScheduleViewController.m in Sources */,
 				B6D2E54619CB6FC300630F15 /* AppDelegate.m in Sources */,
 				B6D2E54319CB6FC300630F15 /* main.m in Sources */,
 				B6301FE119D2C02B00B0DAA3 /* NewsCellTableViewCell.m in Sources */,
 				B6A4099919D990EE00565C62 /* SpeakersTableViewController.m in Sources */,
 				B6A7492219D58B3900683AB3 /* ImageDownloader.m in Sources */,
+				B6514D6D1A3C4BA6008BDCC8 /* OurPartnerViewController.m in Sources */,
+				B6514D691A38E384008BDCC8 /* TweetsViewController.m in Sources */,
 				B6B7453C19D444B6009F1CD5 /* WPJSONCommunicator.m in Sources */,
 				B6B902B719D88F6200769669 /* NSString+HTML.m in Sources */,
 				B6B902BA19D899C000769669 /* NewsDetailViewController.m in Sources */,
@@ -476,10 +520,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TEDxOxford/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -489,10 +535,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TEDxOxford/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

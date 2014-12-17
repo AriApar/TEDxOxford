@@ -8,15 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "WPJSONCommunicatorDelegate.h"
+#import "NewsData.h"
+#import "ImageDownloader.h"
 
 @interface WPJSONCommunicator : NSObject
 
-@property (weak, nonatomic) id<WPJSONCommunicatorDelegate> delegate;
+@property (weak, nonatomic) id<WPJSONCommunicatorDelegate, ImageOnScreenDelegate> delegate;
 
 - (void)getRecentNewsByPage:(NSInteger) pageNumber;
 - (void)getSpeakers;
 - (void)getSchedule;
+- (void)getAboutUs;
+- (void)getOurPartner;
 - (void)refreshNewsFromTime:(NSString *)time;
 - (void)getNewsByOffset:(NSUInteger) offset;
+- (void)getImageForItem:(NewsData *) data;
 
 @end

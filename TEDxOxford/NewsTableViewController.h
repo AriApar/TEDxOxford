@@ -14,6 +14,7 @@
 - (IBAction)refresh:(UIRefreshControl *)sender;
 - (NSMutableArray *)getNewsData;
 - (NSString *)getLastRefreshed;
-
+- (void) setNews:(NSMutableArray *)news;
+- (void) setLastRefreshed:(NSString *)lastRefreshed;
 
 @end

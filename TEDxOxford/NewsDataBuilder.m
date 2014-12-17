@@ -164,12 +164,11 @@
         //Check for keys useful to NewsData
         if ([key isEqualToString:@"title_plain"]) {
             
-            group.title = [result valueForKey:key];
+            group.title = [[result valueForKey:key] stringByDecodingHTMLEntities];
             
         }
         else if ([key isEqualToString:@"content"]) {
-            
-            group.content = [result valueForKey:key];
+            group.content = [NSString stringWithFormat:@"<html><head><style>img{width:100%%;height:auto}iframe{width:100%%;}.aspect-ratio {position: relative;width: 100%%;height: 0;padding-bottom: 56.25%%;}.aspect-ratio iframe {width: 100%%;height: 100%%;};</style></head><body><div class=aspect-ratio>%@</div></body></html>", [[result valueForKey:key]stringByDecodingHTMLEntities]];//[result valueForKey:key];
             
         }
         

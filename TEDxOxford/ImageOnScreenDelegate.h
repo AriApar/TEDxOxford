@@ -12,6 +12,6 @@
 @protocol ImageOnScreenDelegate <NSObject>
 
 - (void)imageData:(NSData *)image readyForItemWithId:(NSString *)postid;
-- (void)fetchingImageFailedWithError:(NSError *)error forItemWithId:(NSString *)postid;
+- (void)prepareImageFailedWithError:(NSError *)error forItemWithId:(NSString *)postid;
 
 @end

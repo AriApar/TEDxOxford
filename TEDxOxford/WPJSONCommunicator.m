@@ -41,6 +41,42 @@
 - (void)getSchedule
 {
     NSString *urlAsString = @"http://tedxoxford.co.uk/api/get_page/?id=955&include=title,title_plain,content,id";
+//http://tedxoxford.co.uk/api/get_page/?id=1132&include=title,title_plain,content,id";
+
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    NSLog(@"%@", urlAsString);
+    
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (error) {
+            [self.delegate fetchingNewsDataFailedWithError:error];
+        } else {
+            [self.delegate receivedScheduleDataJSON:data];
+        }
+    }];
+}
+
+- (void)getAboutUs
+{
+    NSString *urlAsString = @"http://tedxoxford.co.uk/api/get_page/?id=1132&include=title,title_plain,content,id";
+    
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    NSLog(@"%@", urlAsString);
+    
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (error) {
+            [self.delegate fetchingNewsDataFailedWithError:error];
+        } else {
+            [self.delegate receivedScheduleDataJSON:data];
+        }
+    }];
+}
+
+- (void)getOurPartner
+{
+    NSString *urlAsString = @"http://tedxoxford.co.uk/api/get_page/?id=933&include=title,title_plain,content,id";
+    
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", urlAsString);
     
@@ -98,6 +134,14 @@
             [self.delegate receivedNewsDataJSON:data];
         }
     }];
+}
+
+- (void)getImageForItem:(NewsData *)data
+{
+    ImageDownloader *downloader = [ImageDownloader new];
+    downloader.delegate = self.delegate;
+    
+    [downloader getImageFromURLString:data.thumbnailImage forItemWithId:data.postid];
 }
 
 
