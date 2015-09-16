@@ -10,8 +10,9 @@
 #import "WPJSONDataManagerDelegate.h"
 #import "WPJSONDataManager.h"
 
-@interface AboutUsViewController () <WPJSONDataManagerDelegate> {
+@interface AboutUsViewController () <WPJSONDataManagerDelegate, UIWebViewDelegate> {
     WPJSONDataManager *_manager;
+    BOOL isWebViewLoaded;
 }
 
 
@@ -24,6 +25,8 @@
     // Do any additional setup after loading the view.
     _manager = [[WPJSONDataManager alloc] init];
     _manager.delegate = self;
+    _contentTextView.delegate = self;
+    isWebViewLoaded = NO;
     [self showLoadingScreen];
     [_manager getAboutUs];
 }
@@ -54,7 +57,7 @@
         //[self.activityIndicator stopAnimating];
     });
     //TODO show message to user
-    NSLog(@"Error %@; %@", error, [error localizedDescription]);
+    //NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 - (void) prepareImageFailedWithError:(NSError *)error forItemAtIndex:(NSUInteger)index
@@ -92,7 +95,15 @@
 {
     self.contentTextView.hidden = YES;
     [self.activityIndicator startAnimating];
+    isWebViewLoaded = NO;
     [_manager getAboutUs];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    
+    if (!isWebViewLoaded) { isWebViewLoaded = YES; return YES; }
+    else return NO;
 }
 
 @end

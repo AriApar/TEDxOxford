@@ -23,7 +23,7 @@
     NSString *urlAsString = @"http://tedxoxford.co.uk/api/get_category_posts/?slug=iospeakers&count=40&include=title,title_plain,content,id";
     //[self sendRequestTo:urlAsString];
     
-    NSLog(@"%@", urlAsString);
+    //NSLog(@"%@", urlAsString);
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
@@ -44,7 +44,7 @@
 //http://tedxoxford.co.uk/api/get_page/?id=1132&include=title,title_plain,content,id";
 
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
-    NSLog(@"%@", urlAsString);
+    //NSLog(@"%@", urlAsString);
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         
@@ -61,7 +61,7 @@
     NSString *urlAsString = @"http://tedxoxford.co.uk/api/get_page/?id=1132&include=title,title_plain,content,id";
     
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
-    NSLog(@"%@", urlAsString);
+    //NSLog(@"%@", urlAsString);
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         
@@ -78,7 +78,7 @@
     NSString *urlAsString = @"http://tedxoxford.co.uk/api/get_page/?id=933&include=title,title_plain,content,id";
     
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
-    NSLog(@"%@", urlAsString);
+    //NSLog(@"%@", urlAsString);
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         
@@ -106,7 +106,7 @@
 {
     NSString *urlAsString = [NSString stringWithFormat:@"http://tedxoxford.co.uk/api/get_posts/?offset=%ld&include=id,title,title_plain,content,excerpt,thumbnail", offset];
     
-    NSLog(@"%@", urlAsString);
+    //NSLog(@"%@", urlAsString);
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
@@ -123,7 +123,7 @@
 
 - (void)sendRequestTo:(NSString *) urlAsString
 {
-    NSLog(@"%@", urlAsString);
+    //NSLog(@"%@", urlAsString);
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {

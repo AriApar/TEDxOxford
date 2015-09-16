@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B96CDE50-7BF0-49B1-B6EA-EB03245811F7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TEDxOxford</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1E0DD064AEE50D7B0EC714056BF880D2141BA591</key>
+		<string>https://github.com/AriApar/TEDxOxford.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TEDxOxford.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1E0DD064AEE50D7B0EC714056BF880D2141BA591</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AriApar/TEDxOxford.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1E0DD064AEE50D7B0EC714056BF880D2141BA591</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1E0DD064AEE50D7B0EC714056BF880D2141BA591</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TEDxOxford</string>
+		</dict>
+	</array>
+</dict>
+</plist>

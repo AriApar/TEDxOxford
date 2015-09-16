@@ -63,8 +63,9 @@
 
 - (void)saveData
 {
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSLog(path);
+    //NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    //NSLog(path);
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
     if(![[NSFileManager defaultManager] fileExistsAtPath:path]){
         [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
@@ -84,13 +85,15 @@
     
     BOOL success = [NSKeyedArchiver archiveRootObject:rootObject toFile:[path stringByAppendingPathComponent:@"archive.data"]];
     
-    NSLog(@"Archived: %@", success ? @"Yes" : @"No");
+    //NSLog(@"Archived: %@", success ? @"Yes" : @"No");
     
     
 }
 
 - (void) loadData {
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    //NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     path = [path stringByAppendingPathComponent:@"archive.data"];
     
     UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
@@ -112,7 +115,7 @@
             [mainController setLastRefreshed:[rootObject valueForKey:@"LastRefreshed"]];
         }
         
-        NSLog(@"Data loaded");
+        //NSLog(@"Data loaded");
     }
 
     

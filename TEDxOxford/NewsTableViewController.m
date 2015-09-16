@@ -156,13 +156,13 @@
         }
     });
     //TODO show message to user
-    NSLog(@"Error %@; %@", error, [error localizedDescription]);
+    //NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 - (void) prepareImageFailedWithError:(NSError *)error forItemWithId:(NSString *)postid
 {
     //TODO show message to user
-    NSLog(@"Error %@; %@", error, [error localizedDescription]);
+    //NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 - (void) updateImageForItemWithId:(NSString *)postid withImageData:(NSData *)image
@@ -265,7 +265,7 @@
         _lastRefreshed = [rootObject valueForKey:@"LastRefreshed"];
     }
     
-    NSLog(@"Data loaded");
+    //NSLog(@"Data loaded");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

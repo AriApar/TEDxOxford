@@ -67,7 +67,7 @@
         }
     });
     //TODO show message to user
-    NSLog(@"Error %@; %@", error, [error localizedDescription]);
+    //NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 - (void) prepareImageFailedWithError:(NSError *)error forItemAtIndex:(NSUInteger)index
@@ -76,7 +76,7 @@
         //[self.activityIndicator stopAnimating];
     });
     //TODO show message to user
-    NSLog(@"Error %@; %@", error, [error localizedDescription]);
+    //NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 - (void) updateImageForItemAtIndex:(NSUInteger)index withImage:(UIImage *)image

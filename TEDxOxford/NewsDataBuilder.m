@@ -27,7 +27,7 @@
     //UIImage *defImg = [UIImage imageNamed:@"defaultThumbnail"];
     
     NSArray *results = [parsedObject valueForKey:@"posts"];
-    NSLog(@"Count %d", results.count);
+    //NSLog(@"Count %d", results.count);
     
     for (NSDictionary *groupDic in results) {
         NewsData *group = [[NewsData alloc] init];
@@ -93,7 +93,7 @@
     //UIImage *defImg = [UIImage imageNamed:@"defaultThumbnail"];
     
     NSArray *results = [parsedObject valueForKey:@"posts"];
-    NSLog(@"Count %d", results.count);
+    //NSLog(@"Count %d", results.count);
     
     for (NSDictionary *groupDic in results) {
         NewsData *group = [[NewsData alloc] init];
